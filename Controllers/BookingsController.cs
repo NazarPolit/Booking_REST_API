@@ -129,7 +129,7 @@ namespace Booking_REST_API.Controllers
             return Ok(new { message = "Booking updated successfully." });
 
         }
-        public bool BookingExists(int id)
+        private bool BookingExists(int id)
         {
             return (_context.Bookings?.Any(b => b.Id == id)).GetValueOrDefault();
         }
