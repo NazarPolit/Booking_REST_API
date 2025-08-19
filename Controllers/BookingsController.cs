@@ -51,7 +51,7 @@ namespace Booking_REST_API.Controllers
         {
             if (_context.Bookings == null)
             {
-                return Problem("Entity set 'BookingsContext.Products' is null.");
+                return Problem("Entity set 'BookingsContext.Booking' is null.");
             }
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
